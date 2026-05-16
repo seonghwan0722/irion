@@ -1,0 +1,136 @@
+[0.038s] Invoking command in '/ros2_ws/build/usb_cam': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/usb_cam -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/usb_cam
+[0.259s] -- The C compiler identification is GNU 11.4.0
+[0.429s] -- The CXX compiler identification is GNU 11.4.0
+[0.449s] -- Detecting C compiler ABI info
+[0.587s] -- Detecting C compiler ABI info - done
+[0.596s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.597s] -- Detecting C compile features
+[0.598s] -- Detecting C compile features - done
+[0.605s] -- Detecting CXX compiler ABI info
+[0.747s] -- Detecting CXX compiler ABI info - done
+[0.756s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.757s] -- Detecting CXX compile features
+[0.758s] -- Detecting CXX compile features - done
+[0.769s] -- Found ament_cmake_auto: 1.3.14 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[1.051s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.426s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.434s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.448s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.467s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.491s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.585s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.593s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.790s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.839s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.912s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.937s] -- Looking for pthread.h
+[2.062s] -- Looking for pthread.h - found
+[2.063s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.178s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.180s] -- Found Threads: TRUE  
+[2.593s] -- Found OpenCV: /usr (found version "4.5.4") 
+[2.598s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[2.600s] -- Checking for module 'libavcodec'
+[2.621s] --   Found libavcodec, version 58.134.100
+[2.679s] -- Checking for module 'libavutil'
+[2.700s] --   Found libavutil, version 56.70.100
+[2.749s] -- Checking for module 'libswscale'
+[2.770s] --   Found libswscale, version 5.9.100
+[2.830s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.872s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[2.881s] [0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/usb_cam` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[2.890s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.899s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.899s] -- Configured cppcheck include dirs: /ros2_ws/src/usb_cam/include
+[2.900s] -- Configured cppcheck exclude dirs and/or files: 
+[2.909s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.910s] -- Configured cpplint exclude dirs and/or files: 
+[2.911s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.915s] -- Added test 'lint_cmake' to check CMake code style
+[2.917s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.926s] -- Added test 'uncrustify' to check C / C++ code style
+[2.926s] -- Configured uncrustify additional arguments: 
+[2.928s] -- Added test 'xmllint' to check XML markup files
+[2.934s] -- Configuring done
+[2.988s] -- Generating done
+[3.002s] -- Build files have been written to: /ros2_ws/build/usb_cam
+[3.015s] Invoked command in '/ros2_ws/build/usb_cam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/usb_cam -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/usb_cam
+[3.016s] Invoking command in '/ros2_ws/build/usb_cam': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/usb_cam -- -j16 -l16
+[3.101s] [ 14%] [32mBuilding CXX object CMakeFiles/usb_cam_node_exe.dir/rclcpp_components/node_main_usb_cam_node_exe.cpp.o[0m
+[3.102s] [ 14%] [32mBuilding CXX object CMakeFiles/usb_cam.dir/src/usb_cam.cpp.o[0m
+[3.102s] [ 21%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[3.103s] [ 28%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[4.407s] [ 35%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[4.463s] [ 35%] Built target gtest_main
+[6.077s] [ 42%] [32m[1mLinking CXX shared library libusb_cam.so[0m
+[6.495s] [ 42%] Built target usb_cam
+[6.571s] [ 50%] [32mBuilding CXX object CMakeFiles/usb_cam_node.dir/src/usb_cam_node.cpp.o[0m
+[8.263s] [ 57%] [32m[1mLinking CXX static library libgtest.a[0m
+[8.376s] [ 57%] Built target gtest
+[8.416s] [ 64%] [32mBuilding CXX object CMakeFiles/test_usb_cam_utils.dir/test/test_usb_cam_utils.cpp.o[0m
+[8.416s] [ 71%] [32mBuilding CXX object CMakeFiles/test_pixel_formats.dir/test/test_pixel_formats.cpp.o[0m
+[8.947s] [ 78%] [32m[1mLinking CXX executable usb_cam_node_exe[0m
+[9.307s] [ 78%] Built target usb_cam_node_exe
+[9.969s] [ 85%] [32m[1mLinking CXX executable test_usb_cam_utils[0m
+[10.294s] [ 85%] Built target test_usb_cam_utils
+[10.331s] [ 92%] [32m[1mLinking CXX executable test_pixel_formats[0m
+[10.625s] [ 92%] Built target test_pixel_formats
+[16.156s] [100%] [32m[1mLinking CXX shared library libusb_cam_node.so[0m
+[16.576s] [100%] Built target usb_cam_node
+[16.599s] Invoked command in '/ros2_ws/build/usb_cam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/usb_cam -- -j16 -l16
+[16.601s] Invoking command in '/ros2_ws/build/usb_cam': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/usb_cam
+[16.609s] -- Install configuration: ""
+[16.611s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/environment/library_path.sh
+[16.611s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/environment/library_path.dsv
+[16.612s] -- Installing: /ros2_ws/install/usb_cam/lib/usb_cam/usb_cam_node_exe
+[16.613s] -- Set runtime path of "/ros2_ws/install/usb_cam/lib/usb_cam/usb_cam_node_exe" to ""
+[16.613s] -- Installing: /ros2_ws/install/usb_cam/lib/usb_cam/show_image.py
+[16.613s] -- Installing: /ros2_ws/install/usb_cam/lib/libusb_cam.so
+[16.615s] -- Installing: /ros2_ws/install/usb_cam/lib/libusb_cam_node.so
+[16.622s] -- Set runtime path of "/ros2_ws/install/usb_cam/lib/libusb_cam_node.so" to ""
+[16.622s] -- Installing: /ros2_ws/install/usb_cam/include
+[16.623s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam
+[16.624s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/usb_cam_node.hpp
+[16.624s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/utils.hpp
+[16.625s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/usb_cam.hpp
+[16.625s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/conversions.hpp
+[16.625s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/formats
+[16.625s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/formats/pixel_format_base.hpp
+[16.625s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/formats/yuyv.hpp
+[16.625s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/formats/utils.hpp
+[16.625s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/formats/mjpeg.hpp
+[16.626s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/formats/rgb.hpp
+[16.626s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/formats/uyvy.hpp
+[16.626s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/formats/av_pixel_format_helper.hpp
+[16.626s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/formats/mono.hpp
+[16.626s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/formats/m420.hpp
+[16.627s] -- Installing: /ros2_ws/install/usb_cam/include/usb_cam/constants.hpp
+[16.627s] -- Up-to-date: /ros2_ws/install/usb_cam/lib/libusb_cam_node.so
+[16.627s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/launch
+[16.628s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/launch/__init__.py
+[16.628s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/launch/camera.launch.py
+[16.628s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/launch/camera_config.py
+[16.628s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/config
+[16.629s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/config/camera_info.yaml
+[16.629s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/config/params_1.yaml
+[16.629s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/config/params_2.yaml
+[16.630s] -- Installing: /ros2_ws/install/usb_cam/share/ament_index/resource_index/package_run_dependencies/usb_cam
+[16.631s] -- Installing: /ros2_ws/install/usb_cam/share/ament_index/resource_index/parent_prefix_path/usb_cam
+[16.631s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/environment/ament_prefix_path.sh
+[16.632s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/environment/ament_prefix_path.dsv
+[16.632s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/environment/path.sh
+[16.632s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/environment/path.dsv
+[16.632s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/local_setup.bash
+[16.633s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/local_setup.sh
+[16.633s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/local_setup.zsh
+[16.633s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/local_setup.dsv
+[16.633s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/package.dsv
+[16.634s] -- Installing: /ros2_ws/install/usb_cam/share/ament_index/resource_index/packages/usb_cam
+[16.635s] -- Installing: /ros2_ws/install/usb_cam/share/ament_index/resource_index/rclcpp_components/usb_cam
+[16.635s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/cmake/ament_cmake_export_libraries-extras.cmake
+[16.635s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/cmake/ament_cmake_export_dependencies-extras.cmake
+[16.636s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/cmake/ament_cmake_export_include_directories-extras.cmake
+[16.636s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/cmake/usb_camConfig.cmake
+[16.636s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/cmake/usb_camConfig-version.cmake
+[16.636s] -- Installing: /ros2_ws/install/usb_cam/share/usb_cam/package.xml
+[16.639s] Invoked command in '/ros2_ws/build/usb_cam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/usb_cam
