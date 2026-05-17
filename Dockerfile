@@ -1,5 +1,4 @@
 # 1. 베이스 이미지 설정
-FROM ubuntu:22.04
 FROM ros:humble
 
 # 2. 필수 패키지 설치
