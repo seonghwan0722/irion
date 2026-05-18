@@ -1,0 +1,20 @@
+- 세가지 축으로 구성 **규칙 정의(Models) → 지능 생성(Planner) → 통신 및 관리(Node)**
+    - Models.py 데이터 표준화
+        - 로봇과 AI가 오해없이 소통하도록 명확한 데이터 규격 정의
+        - System-2의 설계도면(스키마) 역할을 하는 파일
+        - LLM↔system1사이의 공통 언어, 약속을 코드로 정의 (둘 각의 계약서)
+        - 규격, 범위를 벗어난 데이터는 애초에 통과 X
+    - llm_planner.py: 지능형 추론
+        - 모호한 사람의 말을 구체적인 좌표, 행동 계획으로 변환
+        - 앞에서 만든 데이터 규격(models.py)을 실제로 사용해 계획을 생성하는 플래너
+        - 구성 3단계
+            - 모델 설정: 어떤 AI?
+            - 프롬프트 엔지니어링: AI에게 어떤 역할을 부여하고 정보를 줄 것인가?
+            - 실행 체인: 입력을 넣어서 결과를 뽑아내는 파이프라인
+    - system2_node.py: 연결과 제어
+    - 생성된 계획을 ROS2로 전송하고, 현장 보고를 받아 운영자에게 중계
+    - 데이터 모델(models.py)과 추론 로직(llm_planner.py)을 ROS2 런타임 환경에 통합하는 메인 실행 엔진
+    - LLM 기반의 추론 시스템을 ROS 2 환경에 안착시키기 위한 핵심 구현체
+        - Multi-threading : ROS 콜백(spin)과 운영자 입력 루프를 분리 → 응답성 유지
+        - Data Normalization : normalize_plan_for_schema()로 LLM 출력 변동성을 보정 → 스키마 무결성 보장
+        - Interactive Callback : report_context_callback()으로 로봇← 운영자 실시간 협업(Teaming) 구현

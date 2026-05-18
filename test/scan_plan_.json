@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "mission_id": "scan_demo_001",
+  "intent": "scan",
+  "steps": [
+    {
+      "task": "scan",
+      "params": {
+        "sweep_deg": 120,
+        "yaw_rate_dps": 10,
+        "pitch_deg_up": 2,
+        "pitch_deg_down": -2,
+        "duration_sec": 25,
+        "watch_classes": ["person"],
+        "report_on_found": true
+      }
+    }
+  ]
+} 

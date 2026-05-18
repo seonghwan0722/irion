@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "mission_id": "test_move_001",
+  "intent": "test_move_to",
+  "steps": [
+    {
+      "task": "move_to",
+      "params": {
+        "goal": { "x": 2.5, "y": 1.0, "yaw": 0.0 }
+      }
+    }
+  ],
+  "replan_rules": {
+    "hard_stuck_timeout_sec": 15.0,
+    "progress_grace_sec": 4.0,
+    "progress_epsilon_m": 0.05
+  }
+}

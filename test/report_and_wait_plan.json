@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "mission_id": "demo_report_wait_001",
+  "intent": "test",
+  "steps": [
+    {
+      "task": "scan",
+      "params": {
+        "sweep_deg": 180,
+        "yaw_rate_dps": 15,
+        "duration_sec": 10,
+        "watch_classes": ["person"],
+        "report_on_found": true
+      }
+    },
+    {
+      "task": "report_and_wait",
+      "params": {
+        "prompt": "[report_and_wait] 추가 명령을 입력하세요 (엔터만 치면 아무것도 안 함):\\n> "
+      }
+    },
+    {
+      "task": "return_to_home",
+      "params": {}
+    }
+  ]
+}
