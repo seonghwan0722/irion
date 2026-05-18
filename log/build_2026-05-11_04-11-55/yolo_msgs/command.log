@@ -1,6 +1,0 @@
-Invoking command in '/ros2_ws/build/yolo_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/yolo_ros/yolo_msgs -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/yolo_msgs
-Invoked command in '/ros2_ws/build/yolo_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/yolo_ros/yolo_msgs -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/yolo_msgs
-Invoking command in '/ros2_ws/build/yolo_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/yolo_msgs -- -j16 -l16
-Invoked command in '/ros2_ws/build/yolo_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/yolo_msgs -- -j16 -l16
-Invoking command in '/ros2_ws/build/yolo_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/yolo_msgs
-Invoked command in '/ros2_ws/build/yolo_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/yolo_msgs

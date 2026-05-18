@@ -2,7 +2,8 @@
      2 from rclpy.node import Node
      3 import math
      4 import time
-     5
+     5# gpt-4.1 대신 표준 모델인 gpt-4o 사용
+    temperature=0.1, # 창의성 낮추고, 일관된 답변 유도
      6 # ROS2 표준 센서 메시지 임포트
      7 from sensor_msgs.msg import LaserScan, Image, Imu, PointCloud2
      8 from std_msgs.msg import Header

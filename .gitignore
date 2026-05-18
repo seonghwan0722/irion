@@ -1,0 +1,35 @@
+# ROS 2 build artifacts
+install/
+build/
+log/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# Environment variables (Sensitive information)
+.env
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Large LLM Models (GGUF, etc.)
+models/
+*.gguf
+
+# OS specific files
+.DS_Store
+Thumbs.db

@@ -1,6 +1,7 @@
 # system2/system2/llm_planner.py
 # chain=prompt|llm|parser로 모호한 자연어를 검증된 파이썬 객체로 반환
 import json
+import os
 from typing import List, Optional, Dict, Any
 from langchain_openai import ChatOpenAI 
 from langchain_core.prompts import ChatPromptTemplate
@@ -8,11 +9,49 @@ from langchain_core.output_parsers import PydanticOutputParser
 
 from .models import HighLevelPlan, SystemState
 
-# LLM 설정
-llm = ChatOpenAI( # 사용할 LLM 모델
-    model="gpt-4o", # gpt-4.1 대신 표준 모델인 gpt-4o 사용
-    temperature=0.1, # 창의성 낮추고, 일관된 답변 유도
-)
+# LLM 설정 (환경 변수에 따라 OpenAI 또는 로컬 LLM 선택)
+# USE_LOCAL_LLM=true 설정 시 로컬 모델 사용
+# LOCAL_LLM_TYPE: 'ollama', 'openai-compatible', 'llamacpp' 중 선택 (기본 ollama)
+USE_LOCAL = os.getenv("USE_LOCAL_LLM", "false").lower() == "true"
+LOCAL_LLM_TYPE = os.getenv("LOCAL_LLM_TYPE", "ollama").lower()
+LOCAL_MODEL = os.getenv("LOCAL_MODEL_NAME", "llama3") # Ollama/OpenAI용 모델명
+LOCAL_MODEL_PATH = os.getenv("LOCAL_MODEL_PATH", "models/llama-3-8b.Q4_K_M.gguf") # LlamaCpp용 경로
+LOCAL_API_BASE = os.getenv("LOCAL_API_BASE", "http://localhost:11434/v1") # 로컬 서버 주소
+
+if USE_LOCAL:
+    if LOCAL_LLM_TYPE == "ollama":
+        # 1. Ollama를 사용하는 경우 (추천)
+        # pip install langchain-ollama
+        from langchain_ollama import ChatOllama
+        llm = ChatOllama(
+            model=LOCAL_MODEL,
+            temperature=0.1,
+        )
+    elif LOCAL_LLM_TYPE == "llamacpp":
+        # 2. LlamaCpp를 직접 사용하는 경우 (GGUF 모델 파일 필요)
+        # pip install llama-cpp-python langchain-community
+        from langchain_community.llms import LlamaCpp
+        llm = LlamaCpp(
+            model_path=LOCAL_MODEL_PATH,
+            temperature=0.1,
+            max_tokens=2048,
+            n_ctx=4096,
+            verbose=False,
+        )
+    else:
+        # 3. OpenAI 호환 로컬 서버를 사용하는 경우 (LM Studio, vLLM, LocalAI 등)
+        llm = ChatOpenAI(
+            model=LOCAL_MODEL,
+            base_url=LOCAL_API_BASE,
+            api_key="not-needed",
+            temperature=0.1,
+        )
+else:
+    # 4. 기본 OpenAI API 사용
+    llm = ChatOpenAI(
+        model="gpt-4o",
+        temperature=0.1,
+    )
 
 parser = PydanticOutputParser(pydantic_object=HighLevelPlan)
 # LLM을 제어하기 위한 LangChain의 강력한 유틸리리
