@@ -86,6 +86,11 @@ user_template = """
 Spot+ATS가 수행해야 할 HighLevelPlan JSON을 설계하라.
 """
 
+prompt = ChatPromptTemplate.from_messages([
+    ("system", system_template),
+    ("user", user_template),
+])
+
 
 # 데이터 변환함수: 시스템을 효율적으로 다루기 위한'통역사'와 '필터'
     # 불필요한 데이터를 필터링하여 토큰 낭비 및 정보의 과부화 방지
@@ -183,7 +188,7 @@ def build_plan(
 ) -> HighLevelPlan:
 
     state_text = state_to_text(system1_state)
-    extra_context_text = extra_context_to_text(extra_context)
+    extra_text = extra_context_text(extra_context)
     format_instructions = parser.get_format_instructions() # -> HighLevelPlan JSON 스키마 지시문 자동 생성
     chain = prompt | llm | parser # 프롬프트 채우기 -> LLM 호출 -> 결과 파싱까지 하나의 파이프라인으로 연결
 
@@ -191,7 +196,7 @@ def build_plan(
         { # 운용자 명령 + 상태 요약 등을 AI(LLM)에게 전달 -> AI(LLM)는 검증된 HighLevelPlan 객체로 반환
             "user_command": user_command,
             "state_text": state_text,
-            "extra_context_text": extra_context_text,
+            "extra_context_text": extra_text,
             "format_instructions": format_instructions,
         }
     )

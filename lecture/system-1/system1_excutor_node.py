@@ -988,7 +988,7 @@ def exec_report_and_wait( # 단위 액션 엔트리 포인트
     node.get_logger().info(f"[report_and_wait] 최종 decision={decision}")
 
     # 아래와 같은 이유로 의도적으로 모든 경우에 True 반환
-    # 현재 플랜의 한 스텝 역할만 담당 (실제 시나리오 제어는 상위로직에서 처리)
+# 현재 플랜의 한 스텝 역할만 담당 (실제 시나리오 제어는 상위로직에서 처리)
     if decision == "continue": # 아무 것도 못받거나 TIMEOUT일 때
         return True
     elif decision == "new_plan": # System-2가 이미 /high_level_plan을 publish 했다고 가정

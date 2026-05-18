@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>system2</name>
+  <version>0.0.1</version>
+  <description>System-2 High-Level Planner</description>
+  <maintainer email="korea@todo.todo">korea</maintainer>
+  <license>Apache-2.0</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>system_msgs</exec_depend>
+  <exec_depend>python3-pydantic</exec_depend>
+  <exec_depend>python3-langchain</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

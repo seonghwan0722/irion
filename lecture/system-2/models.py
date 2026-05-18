@@ -6,10 +6,11 @@ from pydantic import BaseModel, Field
 
 class Step(BaseModel): # 로봇이 수행할 "행동 하나"를 표현하는 모델
     task: Literal[ # task 환각에 대비-> 5개 문자열만 인정, 나머지는 에러 처리
-        "move_to", # 허용된 문자열
-        "scan:",
+        "move_to",
+        "scan",
+        "track",
         "report_and_wait",
-        "return_to_base",
+        "return_to_home",
     ]
     params: Dict[str, Any] = Field(default_factory=dict)  # task별로 필요한 데이터가 다르기에 행동마다 데이터 성향에 맞게 유연하게 설정
     guard: Optional[str] = None
